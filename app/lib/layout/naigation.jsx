@@ -9,8 +9,8 @@ export default function Navigation(){
     return(
         <nav className="hidden sm:flex">
             <ul className="flex gap-[33px]">
-                {navigation.map(nav => (
-                    <li className="nav-item">
+                {navigation.map((nav, index) => (
+                    <li key={index} className="nav-item">
                         {nav}
                     </li>
                 ))}
