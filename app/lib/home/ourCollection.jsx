@@ -31,7 +31,7 @@ export default function OurCollection(){
     ];
     
     return(
-        <section className="mt-[120px] sm:mt-[140px] lg:mt-[200px] mb-[120px] sm:mb-[140px] lg:mb-[200px] relative">
+        <section className="mt-[120px] sm:mt-[140px] lg:mt-[100px] mb-[120px] sm:mb-[140px] lg:mb-[200px] relative">
 
             <div className="fraunces-bold flex justify-center text-[2.5em] sm:text-[11.5vw] z-[1] sm:relative sm:top-[73px]  lg:top-[50px]">
                 <OurCollectionTitle/>

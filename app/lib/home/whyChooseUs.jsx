@@ -17,12 +17,12 @@ export default function WhyChooseUs(){
             cardText: 'We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.'
         },
 
-    ]
+    ];
 
     return(
         <section>
 
-            <div className="bg-[#2C343E] h-[900px] sm:h-[571px] lg:h-[557px] rounded-[10px] px-[4%] sm:px-[6%]">
+            <div className="bg-[#2C343E] h-[900px] sm:h-[571px] lg:h-[557px] rounded-[10px] px-[4%] sm:px-[6%] lg:px-[2%] xl:px-[6%]">
 
                 <h2 className="text-center fraunces-bold text-[white] text-[1.8rem] sm:text-[2em] lg:text-[2.5em] pt-[65px] mb-[30px]">
                     Why choose us?
@@ -32,9 +32,9 @@ export default function WhyChooseUs(){
                     A large part of our role is choosing which particular coffees will be featured  in our range. This means working closely with the best coffee growers to give you a more impactful experience on every level.
                 </p>
 
-                <div className="flex flex-col lg:flex-row gap-[20px]">
+                <div className="flex flex-col lg:flex-row lg:justify-center gap-[20px]">
                     {cards.map((card, index) => (
-                        <div key={index} className="bg-dark-cyan flex flex-col sm:flex-row lg:flex-col sm:gap-[12px] md:gap-[56px] justify-center sm:justify-start lg:justify-center sm:px-[30px] md:px-[68px] lg:px-[0px] items-center w-[100%] h-[382px] sm:h-[180px] lg:h-[382px] rounded-[10px]">
+                        <div key={index} className="bg-dark-cyan flex flex-col sm:flex-row lg:flex-col sm:gap-[12px] md:gap-[56px] justify-center sm:justify-start lg:justify-center sm:px-[30px] md:px-[68px] lg:px-[0px] items-center w-[100%] h-[382px] sm:h-[180px] lg:h-[382px] rounded-[10px] lg:max-w-[350px]">
 
                             {card.icon}
 
