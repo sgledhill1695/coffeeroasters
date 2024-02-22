@@ -31,13 +31,13 @@ export default function OurCollection(){
     ];
     
     return(
-        <section className="mt-[120px] sm:mt-[140px] lg:mt-[100px] mb-[120px] sm:mb-[140px] lg:mb-[200px] relative">
+        <section className="mt-[140px] sm:mt-[10px] lg:mt-[190px] mb-[125px] sm:mb-[146px] lg:mb-[200px] relative">
 
             <div className="fraunces-bold flex justify-center text-[2.5em] sm:text-[11.5vw] z-[1] sm:relative sm:top-[73px]  lg:top-[50px]">
                 <OurCollectionTitle/>
             </div>
 
-            <div className="flex flex-col lg:flex-row lg:justify-center sm:items-center gap-[80px] lg:gap-[5px]">
+            <div className="flex flex-col lg:flex-row lg:justify-center sm:items-center lg:items-start gap-[80px] lg:gap-[5px]">
 
                 {collection.map((c, index) => (
                     <div key={index} className="flex flex-col sm:flex-row lg:flex-col gap-[33px] lg:gap-[70px] items-center">
@@ -50,7 +50,7 @@ export default function OurCollection(){
                         />
                         <div className="flex flex-col gap-[33px] text-center sm:text-start lg:text-center lg:justify-between lg:items-center z-[2]">
                             <h3 className="fraunces-bold text-[1.5em] text-[#333D4B]">{c.title}</h3>
-                            <p className="text-[15px] text-[#333D4B] max-w-[285px]">{c.text}</p>
+                            <p className="text-[15px] text-[#333D4B] max-w-[285px] lg:max-w-[245px]">{c.text}</p>
                         </div>
                     </div>
                 ))}

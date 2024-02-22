@@ -1,0 +1,37 @@
+export default function Navigation({topbarNav, footerNav}){
+
+    const navigation = [
+        'home',
+        'about us',
+        'create your plan'
+    ];
+
+    return(
+        <>
+            {topbarNav && (
+                <nav className="hidden sm:flex">
+                    <ul className="flex gap-[33px]">
+                        {navigation.map((nav, index) => (
+                            <li key={index} className="nav-item hover:cursor-pointer">
+                                {nav}
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            )}
+
+            {footerNav && (
+                <nav className="flex mt-[50px] lg:mt-[0px]">
+                    <ul className="flex flex-col sm:flex-row text-center gap-[28px] sm:gap-[32px]">
+                        {navigation.map((nav, index) => (
+                            <li key={index} className="nav-item hover:text-[white] hover:cursor-pointer">
+                                {nav}
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            )}
+
+        </>
+    )
+}

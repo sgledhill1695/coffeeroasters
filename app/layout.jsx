@@ -2,7 +2,8 @@ import "./globals.css";
 
 import Logo from "./lib/layout/logo";
 import Hamburger from "./lib/layout/hamburger";
-import Navigation from "./lib/layout/naigation";
+import Navigation from "./lib/layout/navigation";
+import Footer from "./lib/layout/footer";
 
 
 export const metadata = {
@@ -17,10 +18,12 @@ export default function RootLayout({ children }) {
         <section className="flex justify-between items-center mt-[33px] sm:mt-[40px]">
           <Logo/>
           <Hamburger/>
-          <Navigation />
+          <Navigation topbarNav={true} />
         </section>
 
         {children}
+
+        <Footer/>
 
       </body>
     </html>

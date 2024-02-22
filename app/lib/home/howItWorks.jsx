@@ -27,10 +27,10 @@ export default function HowItWorks(){
             <h4 className="text-center md:text-start text-[1.5em] fraunces-bold text-[#83888F]">How it works</h4>
 
             <svg className="hidden md:flex md:max-w-[550px] lg:max-w-[78%] xl:max-w-[800px] 2xl:max-w-[790px] 2xl:min-w-[790px] my-[45px]" viewBox="0 0 497 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 16H481" stroke="#FDD6BA" stroke-width="2" />
-                <circle cx="15.5" cy="15.5" r="14.5" fill="#FEFCF7" stroke="#0E8784" stroke-width="2" />
-                <circle cx="248.5" cy="15.5" r="14.5" fill="#FEFCF7" stroke="#0E8784" stroke-width="2" />
-                <circle cx="481.5" cy="15.5" r="14.5" fill="#FEFCF7" stroke="#0E8784" stroke-width="2" />
+                <path d="M15 16H481" stroke="#FDD6BA" strokeWidth="2" />
+                <circle cx="15.5" cy="15.5" r="14.5" fill="#FEFCF7" stroke="#0E8784" strokeWidth="2" />
+                <circle cx="248.5" cy="15.5" r="14.5" fill="#FEFCF7" stroke="#0E8784" strokeWidth="2" />
+                <circle cx="481.5" cy="15.5" r="14.5" fill="#FEFCF7" stroke="#0E8784" strokeWidth="2" />
             </svg>
 
             <div className="flex flex-col md:flex-row items-center md:items-start gap-[68px] md:gap-x-[30px] lg:gap-[95px] mt-[85px]">
@@ -45,7 +45,7 @@ export default function HowItWorks(){
                             {step.stepTitle}
                         </h5>
 
-                        <p className="text-[15px] text-[#333D4B] max-w-[327px] md:max-w-[223px] lg:max-w-[285px] text-center md:text-start">
+                        <p className="text-[15px] text-[#333D4B] max-w-[327px] md:max-w-[223px] lg:max-w-[260px] text-center md:text-start">
                             {step.stepInfo}
                         </p>
 
@@ -53,7 +53,7 @@ export default function HowItWorks(){
                 ))}
             </div>
 
-            <div className="flex justify-center md:justify-start mt-[68px]">
+            <div className="flex justify-center md:justify-start mt-[55px]">
                 <div className="w-[217px]">
                     <PrimaryButton
                         text={'Create your plan'}
