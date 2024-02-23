@@ -12,6 +12,7 @@ export default function OurCommitment(){
                         height={470}
                         src="/assets/about/mobile/image-commitment.jpg"
                         alt="image of barista making a coffee"
+                        quality={100}
                         className="rounded-[10px]"
                     />
                 </div>
@@ -22,6 +23,7 @@ export default function OurCommitment(){
                         height={470}
                         src="/assets/about/tablet/image-commitment.jpg"
                         alt="image of barista making a coffee"
+                        quality={100}
                         className="rounded-[10px]"
                     />
                 </div>
@@ -32,6 +34,7 @@ export default function OurCommitment(){
                         height={520}
                         src="/assets/about/desktop/image-commitment.jpg"
                         alt="image of barista making a coffee"
+                        quality={100}
                         className="rounded-[10px]"
                     />
                 </div>
