@@ -4,6 +4,7 @@ import Logo from "./lib/layout/logo";
 import Hamburger from "./lib/layout/hamburger";
 import Navigation from "./lib/layout/navigation";
 import Footer from "./lib/layout/footer";
+import MarginWrapper from "./lib/layout/marginWrapper";
 
 
 export const metadata = {
@@ -13,18 +14,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="max-w-[1440px] m-auto mx-[4%] sm:mx-[6%] lg:px-[80px] lg:mx-auto">
+      <body>
 
-        <section className="flex justify-between items-center mt-[33px] sm:mt-[40px]">
-          <Logo/>
-          <Hamburger/>
-          <Navigation topbarNav={true} />
-        </section>
+        <MarginWrapper>
+          <section className="flex justify-between items-center mt-[33px] sm:mt-[40px]">
+
+            <Logo />
+            <Hamburger />
+            <Navigation topbarNav={true} />
+          </section>
+        </MarginWrapper>
+
 
         {children}
 
-        <Footer/>
-
+        <MarginWrapper>
+          <Footer />
+        </MarginWrapper>
+        
       </body>
     </html>
   );

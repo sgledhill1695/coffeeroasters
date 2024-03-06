@@ -26,6 +26,10 @@ body {
   line-height: 26px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .title-alternate-big {
   font-family: fraunces;
   font-size: 9.4em;
@@ -60,3 +64,51 @@ body {
 .primary-button:hover {
   background-color: #66D2CF;
 }
+
+.primary-button:disabled{
+  background-color: #83888F;
+  color: #bcc1c9;
+}
+
+ .accordion-closed svg {
+   transform: rotate(180deg);
+ }
+
+.accordion-close svg {
+  animation: closeRotateSVG 0.2s linear forwards;
+}
+
+ @keyframes closeRotateSVG {
+   from {
+     transform: rotate(0deg);
+   }
+
+   to {
+     transform: rotate(180deg);
+   }
+
+ }
+
+.accordion-open svg {
+   animation: openRotateSVG 0.3s linear forwards;
+ }
+
+ @keyframes openRotateSVG {
+    from{
+      transform: rotate(180deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  
+ }
+
+.accordion-pannel-closed{
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.accordion-pannel-open {
+  max-height: 8000px;
+}
+
