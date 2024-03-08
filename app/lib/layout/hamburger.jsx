@@ -19,10 +19,11 @@ export default function Hamburger(){
         if (!open) {
             mobileNav.classList.remove('mobile-nav-open');
             mobileNav.classList.add('mobile-nav-closed');
-
+            document.body.classList.remove('overflow-hidden');
         } else if(open) {
             mobileNav.classList.remove('mobile-nav-closed');
             mobileNav.classList.add('mobile-nav-open');
+            document.body.classList.add('overflow-hidden');
         }
 
 
