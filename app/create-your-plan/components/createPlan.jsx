@@ -5,8 +5,11 @@ import Subtitles from "./subtitles";
 import Summary from "./summary";
 import CreateMyPlan from "./createMyPlan";
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation'
 
 export default function CreatePlan(){
+
+    const router = useRouter();
 
     //States
     const [questions, setQuestions] = useState([
@@ -15,7 +18,6 @@ export default function CreatePlan(){
             subtitle: 'Prefrences',
             open: true,
             answered: false,
-            inView: false,
             answers: [
                 {
                     answer: 'Capsule',
@@ -40,7 +42,6 @@ export default function CreatePlan(){
             subtitle: 'Bean Type',
             open: true,
             answered: false,
-            inView: false,
             answers: [
                 {
                     answer: 'Single Origin',
@@ -65,7 +66,6 @@ export default function CreatePlan(){
             subtitle: 'Quantity',
             open: true,
             answered: false,
-            inView: false,
             answers: [
                 {
                     answer: '250g',
@@ -90,7 +90,6 @@ export default function CreatePlan(){
             subtitle: 'Grind Options',
             open: true,
             answered: false,
-            inView: false,
             answers: [
                 {
                     answer: 'Wholebean',
@@ -115,7 +114,6 @@ export default function CreatePlan(){
             open: true,
             subtitle: 'Deliveries',
             answered: false,
-            inView: false,
             answers: [
                 {
                     answer: 'Every week',
@@ -160,10 +158,11 @@ export default function CreatePlan(){
         };
     }, [questions]);
 
+
     return (
         <section className="mt-[120px] relative">
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-[125px] relative">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-x-[125px] relative">
 
                 <div>
                     <Subtitles 
@@ -177,6 +176,7 @@ export default function CreatePlan(){
                     <Accordions
                         questions={questions}
                         setQuestions={setQuestions}
+                        formComplete={formComplete}
                     />
 
                     <Summary
@@ -185,6 +185,7 @@ export default function CreatePlan(){
                     />
 
                     <CreateMyPlan
+                        questions={questions}
                         formComplete={formComplete}
                     />
 

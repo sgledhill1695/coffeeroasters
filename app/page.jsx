@@ -7,15 +7,12 @@ import MarginWrapper from "./lib/layout/marginWrapper";
 export default function Home() {
   return (
     <main>
-
       <MarginWrapper>
         <Hero/>
         <OurCollection/>
         <WhyChooseUs/>
         <HowItWorks/>
       </MarginWrapper>
-
-
     </main>
   );
 }

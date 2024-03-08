@@ -112,3 +112,43 @@ html {
   max-height: 8000px;
 }
 
+.mobile-nav-closed{
+  display: none;
+  opacity: 0;
+  background-image: rgb(255, 255, 255);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 44%, rgba(255, 255, 255, 0) 95%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.mobile-nav-open{
+  background-image: rgb(255, 255, 255);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 44%, rgba(255, 255, 255, 0) 95%);
+  height: 100%;
+  width: 100%;
+  position: absolute;  
+  top: 50px;
+  animation: openMobNav 0.3s;
+}
+
+@keyframes openMobNav {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 100;
+  }
+}
+
+@keyframes closeMobNav {
+
+  from {
+    opacity: 100;
+  }
+
+  to {
+    opacity: 0;
+  }
+
+}

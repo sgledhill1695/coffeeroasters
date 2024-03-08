@@ -19,7 +19,9 @@ export default function Footer(){
         <section className="bg-[#2C343E] flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full h-[345px] sm:h-[270px] lg:h-[120px] mt-[120px] sm:mt-[140px] lg:mt-[180px] mb-[20px] lg:mb-[10px] pt-[10px] lg:px-[80px]">
 
             <div className="flex flex-col lg:flex-row items-center lg:gap-[50px] xl:gap-[100px] lg:items-center">
-                <LogoWhite/>
+                <a href="/">
+                    <LogoWhite />
+                </a>
                 <Navigation footerNav={true}/>
             </div>
 

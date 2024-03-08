@@ -1,4 +1,4 @@
-export default function Accordions({ questions, setQuestions }){
+export default function Accordions({ questions, setQuestions, formComplete }){
 
     const handleOpen = (key, index) => {
 
@@ -65,22 +65,44 @@ export default function Accordions({ questions, setQuestions }){
                         </svg>
                     </div>
 
-                    <div className={`${q.open ? '' : 'hidden'}`}>
-                        <a href={`#accordion${index + 1}`}>
-                            <div className="grid grid-cols-1 gap-[15px]">
-                                {q.answers.map((a, index) => (
+                    <div id={`accordion-pannel-${index}`} className={`${q.open ? '' : 'hidden'}`}>
+                        {index < 4 ? (
+                            <>
+                                <a href={`#accordion${index + 1}`}>
+                                    <div className="grid grid-cols-1 gap-[15px]">
+                                        {q.answers.map((a, index) => (
 
-                                    <button id={`answer${index}`} onClick={() => (handleSelect(q, index))} key={a.answer} className={`${a.active ? 'bg-[#0E8784] text-[white]' : 'bg-[#F4F1EB] text-[#333D4B] hover:bg-[#FDD6BA]'} w-[100%] rounded-[10px] col-span-1  py-[30px] px-[25px] flex flex-col gap-[15px]   hover:cursor-pointer text-start`}>
-                                        <p className="text-[24px] fraunces-bold">
-                                            {a.answer}
-                                        </p>
-                                        <p className="text-[16px] max-w-[278px]">
-                                            {a.answerInfo}
-                                        </p>
-                                    </button>
-                                ))}
-                            </div>
-                        </a>
+                                            <button id={`answer${index}`} onClick={() => (handleSelect(q, index))} key={a.answer} className={`${a.active ? 'bg-[#0E8784] text-[white]' : 'bg-[#F4F1EB] text-[#333D4B] hover:bg-[#FDD6BA]'} w-[100%] rounded-[10px] col-span-1  py-[30px] px-[25px] flex flex-col gap-[15px]   hover:cursor-pointer text-start`}>
+                                                <p className="text-[24px] fraunces-bold">
+                                                    {a.answer}
+                                                </p>
+                                                <p className="text-[16px] max-w-[278px]">
+                                                    {a.answerInfo}
+                                                </p>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </a>
+                            </>
+                        ) : (
+                            <>
+                                <a href={`#summary`}>
+                                    <div className="grid grid-cols-1 gap-[15px]">
+                                        {q.answers.map((a, index) => (
+
+                                            <button id={`answer${index}`} onClick={() => (handleSelect(q, index))} key={a.answer} className={`${a.active ? 'bg-[#0E8784] text-[white]' : 'bg-[#F4F1EB] text-[#333D4B] hover:bg-[#FDD6BA]'} w-[100%] rounded-[10px] col-span-1  py-[30px] px-[25px] flex flex-col gap-[15px]   hover:cursor-pointer text-start`}>
+                                                <p className="text-[24px] fraunces-bold">
+                                                    {a.answer}
+                                                </p>
+                                                <p className="text-[16px] max-w-[278px]">
+                                                    {a.answerInfo}
+                                                </p>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </a>
+                            </>
+                        )}
                     </div>
 
             </div>

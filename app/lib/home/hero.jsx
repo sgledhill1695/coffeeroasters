@@ -17,11 +17,11 @@ export default function Hero(){
                         coffees from our best roasters delivered directly to your door, at your schedule.
                     </p>
 
-                    <div className="w-[220px] mt-[10px]">
+                    <a href="/create-your-plan" className="w-[220px] mt-[10px]">
                         <PrimaryButton
                             text={'Create your plan'}
                         />
-                    </div>
+                    </a>
 
 
                 </div>

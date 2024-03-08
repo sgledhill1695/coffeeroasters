@@ -55,10 +55,12 @@ export default function HowItWorks(){
 
             <div className="flex justify-center md:justify-start mt-[55px]">
                 <div className="w-[217px]">
-                    <PrimaryButton
-                        text={'Create your plan'}
-                        href={''}
-                    />
+                    <a href="/create-your-plan">
+                        <PrimaryButton
+                            text={'Create your plan'}
+                            href={''}
+                        />
+                    </a>
                 </div>
             </div>
 

@@ -1,7 +1,8 @@
 export default function Summary({questions, formComplete}){
 
     return(
-        <div className={`${!formComplete ? 'hidden' : ''} bg-[#2C343E] rounded-[10px]  mt-[115px] px-[25px] sm:px-[45px] lg:px-[60px] py-[35px]`}>
+
+        <div id="summary" className={`${!formComplete ? 'opacity-0 max-h-0' : 'opacity-100 max-h-[2000px]'} bg-[#2C343E] rounded-[10px]  mt-[115px] px-[25px] sm:px-[45px] lg:px-[60px] py-[35px]`}>
             <h6 className="text-[16px] text-[#ffffff7a]">
                 ORDER SUMMARY
 
@@ -56,5 +57,6 @@ export default function Summary({questions, formComplete}){
                 </p>
             </h6>
         </div>
+
     )
 }

@@ -1,4 +1,3 @@
-
 export default function Navigation({topbarNav, footerNav}){
 
     const navigation = [

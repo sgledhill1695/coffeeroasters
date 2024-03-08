@@ -7,15 +7,15 @@ export default function Subtitles({questions, setQuestions}){
     //Track which subtitle to highlight
     useEffect(() => {
 
-        let accordion0 = document.getElementById(`accordion0`);
-        let accordion1 = document.getElementById(`accordion1`);
-        let accordion2 = document.getElementById(`accordion2`);
-        let accordion3 = document.getElementById(`accordion3`);
-        let accordion4 = document.getElementById(`accordion4`);
+        let accordion0 = document.getElementById(`accordion-pannel-0`);
+        let accordion1 = document.getElementById(`accordion-pannel-1`);
+        let accordion2 = document.getElementById(`accordion-pannel-2`);
+        let accordion3 = document.getElementById(`accordion-pannel-3`);
+        let accordion4 = document.getElementById(`accordion-pannel-4`);
 
         let options = {
-            rootMargin: "0px",
-            threshold: 1,
+            rootMargin: "0px 0px 0px 0px",
+            threshold: 1.0,
         };
 
         let observer = new IntersectionObserver((entries, observer) => {
@@ -91,7 +91,7 @@ export default function Subtitles({questions, setQuestions}){
     }, [subtitleFixed]);
 
     return(
-        <ul className="hidden lg:flex flex-col gap-[5px]" id="subtitles">
+        <ul className="hidden xl:flex flex-col gap-[5px]" id="subtitles">
             {questions.map((q, index)=> (
                 <li className={`${index > 0 && 'border-t-[1px] border-[#83888f67] pt-[15px]'}  fraunces-bold text-[24px] mb-[15px]`}>
                     <span className={`  ${q.answered ? 'text-[#0e878576]' : 'text-[#333d4b74]'} me-[15px]`}>
